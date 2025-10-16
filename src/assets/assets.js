@@ -36,7 +36,7 @@ export const products = [
     price: "Rp 130.000",
   },
   {
-    name: "Madu Rindu Premium 1L",
+    name: "Madu Rindu Pertamax Turbo",
     img: images.p3,
     price: "Rp 240.000",
   },
@@ -59,17 +59,17 @@ export const products = [
 
 export const testimonies = [
   {
-    icon: "🍃",
+    image: bg1,
     title: "100% Murni",
-    desc: "Tidak dicampur gula atau bahan pengawet — langsung dari sarang lebah hutan.",
+    desc: "Tidak dicampur gula atau bahan pengawet langsung dari sarang lebah hutan.",
   },
   {
-    icon: "💧",
+    image: bg2,
     title: "Tekstur Lembut",
     desc: "Konsistensi lembut, rasa alami dengan aroma bunga hutan tropis.",
   },
   {
-    icon: "❤️",
+    image: bg3,
     title: "Kaya Nutrisi",
     desc: "Mengandung enzim alami, antioksidan, dan vitamin untuk tubuh sehat & bugar.",
   },

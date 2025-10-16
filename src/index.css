@@ -1,27 +1,30 @@
-/* Import Google Fonts (cukup sekali di sini, di luar @layer) */
+/* 🌸 Import Google Fonts (cukup sekali, paling atas) */
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
-/* 🌼 Warna Tema Madu */
+/* 🌼 Palet Warna Tema Madu */
 :root {
-  --color-honey-light: #fff8e1;
+  --color-honey-light: #fff9e6;
   --color-honey: #fbbf24;
-  --color-honey-dark: #d97706;
+  --color-honey-dark: #b45309;
   --color-honey-deep: #78350f;
+  --color-cream: #fef3c7;
 }
 
-/* 🌸 Base Style */
+/* 🌿 Base Style */
 body {
   @apply bg-[var(--color-honey-light)] text-gray-800 font-[Poppins];
 }
 
+/* 🌅 Background Hero */
 .bg-hero {
   background-image: url("./assets/img/bg3.webp");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* 🎨 Utilities Tambahan */
+
+/* 🍯 Utilities Tambahan */
 .text-honey {
   color: var(--color-honey);
 }
@@ -40,25 +43,18 @@ body {
 .bg-honey-deep {
   background-color: var(--color-honey-deep);
 }
+.bg-cream {
+  background-color: var(--color-cream);
+}
 
 /* ✨ Custom Font Classes */
 .font-poppins {
   font-family: "Poppins", sans-serif;
 }
 
-.lobster-two-regular {
-  font-family: "Lobster Two", cursive;
-  font-weight: 400;
-}
-
 .lobster-two-bold {
   font-family: "Lobster Two", cursive;
   font-weight: 700;
-}
-
-.lobster-two-italic {
-  font-family: "Lobster Two", cursive;
-  font-style: italic;
 }
 
 .pacifico-regular {
