@@ -4,11 +4,14 @@
 
 /* 🌼 Palet Warna Tema Madu */
 :root {
-  --color-honey-light: #fff9e6;
+  --color-honey-light: #f3e5b7;
   --color-honey: #fbbf24;
   --color-honey-dark: #b45309;
   --color-honey-deep: #78350f;
   --color-cream: #fef3c7;
+}
+html {
+  scroll-behavior: smooth; /* 🔹 scroll halus */
 }
 
 /* 🌿 Base Style */

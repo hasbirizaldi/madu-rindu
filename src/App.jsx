@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="bg-[var(--color-honey-light)] text-gray-800 font-[Poppins]">
       {/* 🟤 Navbar */}
-      <nav className="bg-honey-dark flex justify-between items-center px-6 md:px-10 py-3 backdrop-blur-md shadow-md fixed w-full top-0 z-50">
+      <nav className="bg-honey-deep flex justify-between items-center px-6 md:px-10 py-3 backdrop-blur-md shadow-md fixed w-full top-0 z-50">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img src={images.logo} alt="Madu Rindu" className="w-16 md:w-20" />
@@ -34,13 +34,13 @@ const App = () => {
         </div>
 
         {/* Menu Mobile Button */}
-        <button className="md:hidden text-white text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="md:hidden text-white text-2xl " onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
         {/* Dropdown Mobile */}
         {menuOpen && (
-          <div className="absolute top-full left-0 w-full bg-honey-dark text-center py-4 flex flex-col gap-4 md:hidden">
+          <div className="absolute top-full left-0 w-full bg-honey-deep text-center py-4 flex flex-col gap-4 md:hidden">
             {["Keunggulan", "Produk", "Testimoni", "Pesan"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)} className="text-white/90 hover:text-yellow-200 font-medium transition">
                 {item}
@@ -52,24 +52,28 @@ const App = () => {
       </nav>
 
       {/* 🍯 Hero Section */}
-      <section className="text-center flex flex-col items-center justify-center bg-hero bg-cover bg-center h-[90vh] pt-28 px-4 md:px-0">
-        <div className="bg-honey-deep/70 p-6 md:p-16 rounded-3xl shadow-lg backdrop-blur-sm max-w-2xl">
+      <section className="text-center flex flex-col items-center justify-center bg-hero bg-cover bg-center h-[100vh] pt-28 px-4 md:px-0">
+        <div className="bg-honey-deep/70 p-6 md:p-16 rounded-3xl shadow-lg backdrop-blur-xs max-w-2xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white font-poppins mb-4 md:mb-6 drop-shadow-md">Manisnya Cinta, Murninya Alam</h1>
           <p className="text-base md:text-lg leading-relaxed font-poppins text-white/90">Madu Rindu menghadirkan kemurnian madu asli dari lebah pilihan, dipanen dengan kasih sayang untuk menjaga kesehatan dan kebahagiaan Anda.</p>
 
-          <button className="mt-8 md:mt-10 bg-honey text-white font-poppins font-semibold px-8 md:px-10 py-3 rounded-full shadow-lg hover:bg-honey-dark transition-transform hover:scale-105">Dapatkan Sekarang</button>
+          <button className="mt-8 md:mt-10 bg-honey-deep text-white font-poppins font-semibold px-8 md:px-10 py-3 rounded-full shadow-lg hover:bg-honey-dark transition-transform hover:scale-105">Dapatkan Sekarang</button>
         </div>
       </section>
 
       {/* 🌻 Keunggulan */}
-      <section id="keunggulan" className="py-20 md:py-24 bg-honey-deep text-center px-6">
-        <h2 className="text-3xl font-bold text-white mb-10 md:mb-12 font-poppins">Keunggulan Madu Rindu</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <section id="keunggulan" className="py-20 md:py-24 bg-honey-light text-center px-6">
+        <h2 className="text-3xl font-bold text-honey-deep mb-10 md:mb-12 font-poppins">Keunggulan Madu Rindu</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonies.map((item, i) => (
-            <div key={i} className="bg-honey-dark/80 p-6 md:p-8 rounded-2xl shadow-md hover:-translate-y-2 transition-transform">
-              <img src={item.image} alt="testimony" className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full mb-4 object-cover border-4 border-amber-200" />
-              <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
-              <p className="text-white/90 font-poppins text-sm md:text-base">{item.desc}</p>
+            <div key={i} className=" bg-amber-100 border-4 border-amber-800 rounded-2xl shadow-md hover:-translate-y-2 transition-transform overflow-hidden ">
+              <div className="p-2 bg-amber-200">
+                <img src={item.image} alt="testimony" className="w-full mx-auto  mb-4 object-cover rounded-full shadow-lg" />
+              </div>
+              <div className="bg-honey-deep py-4 px-2 h-35">
+                <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
+                <p className="text-white/90 font-poppins text-sm md:text-base">{item.desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -85,7 +89,7 @@ const App = () => {
               <div className="p-6">
                 <h3 className="text-lg md:text-xl font-semibold text-honey-dark mb-2">{item.name}</h3>
                 <p className="text-gray-600 mb-4 text-sm md:text-base">{item.price}</p>
-                <button className="bg-honey text-white font-semibold px-6 py-2 rounded-full shadow-md hover:bg-honey-dark hover:shadow-amber-300/40 transition-transform hover:scale-105">Beli Sekarang</button>
+                <button className="bg-honey-dark text-white font-semibold px-6 py-2 rounded-full shadow-md hover:bg-honey-deep cursor-pointer hover:shadow-amber-300/40 transition-transform hover:scale-105">Beli Sekarang</button>
               </div>
             </div>
           ))}
