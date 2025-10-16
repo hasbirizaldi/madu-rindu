@@ -1,0 +1,67 @@
+/* Import Google Fonts (cukup sekali di sini, di luar @layer) */
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* 🌼 Warna Tema Madu */
+:root {
+  --color-honey-light: #fff8e1;
+  --color-honey: #fbbf24;
+  --color-honey-dark: #d97706;
+  --color-honey-deep: #78350f;
+}
+
+/* 🌸 Base Style */
+body {
+  @apply bg-[var(--color-honey-light)] text-gray-800 font-[Poppins];
+}
+
+.bg-hero {
+  background-image: url("./assets/img/bg3.webp");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* 🎨 Utilities Tambahan */
+.text-honey {
+  color: var(--color-honey);
+}
+.text-honey-dark {
+  color: var(--color-honey-dark);
+}
+.text-honey-deep {
+  color: var(--color-honey-deep);
+}
+.bg-honey {
+  background-color: var(--color-honey);
+}
+.bg-honey-dark {
+  background-color: var(--color-honey-dark);
+}
+.bg-honey-deep {
+  background-color: var(--color-honey-deep);
+}
+
+/* ✨ Custom Font Classes */
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.lobster-two-regular {
+  font-family: "Lobster Two", cursive;
+  font-weight: 400;
+}
+
+.lobster-two-bold {
+  font-family: "Lobster Two", cursive;
+  font-weight: 700;
+}
+
+.lobster-two-italic {
+  font-family: "Lobster Two", cursive;
+  font-style: italic;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+}
