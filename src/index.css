@@ -6,8 +6,8 @@
 :root {
   --color-honey-light: #f3e5b7;
   --color-honey: #fce2a0;
-  --color-honey-dark: #b45309;
-  --color-honey-deep: #a34916;
+  --color-honey-dark: #ad4c02;
+  --color-honey-deep: #97400e;
   --color-cream: #fef3c7;
 }
 html {
@@ -26,7 +26,32 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.bg-manfaat {
+  position: relative;
+  overflow: hidden; /* biar blur tidak keluar area */
+}
 
+.bg-manfaat::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/img/bg1.webp");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  transform: scale(1.1); /* sedikit lebih besar agar tepi blur tak terlihat */
+  z-index: 0;
+}
+
+.bg-manfaat > * {
+  position: relative;
+  z-index: 1; /* pastikan konten di atas blur */
+}
+
+.shadow-ku {
+  box-shadow: 3px 3px 5px #00000060;
+}
 /* 🍯 Utilities Tambahan */
 .text-honey {
   color: var(--color-honey);
